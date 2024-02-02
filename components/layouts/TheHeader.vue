@@ -1,0 +1,18 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <div class="pb-20 pt-12  sticky top-0 bg-gradient-to-b from-dark from-50% to-transparent pointer-events-none">
+    <div class="w-full  flex items-center justify-between pointer-events-auto">
+      <h1 class="font-bold text-lg">رهیاب قیمت</h1>
+      <nuxt-link to="/faq" class="btn btn-primary">
+        سوالات متداول
+      </nuxt-link>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+
+</style>
