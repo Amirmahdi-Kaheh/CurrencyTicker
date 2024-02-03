@@ -31,7 +31,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
-      API_BASE_URL: process.env.API_BASE_URL
+      apiBaseUrl: process.env.API_BASE_URL,
+      downloadBaseUrl: process.env.DOWNLOAD_BASE_URL
     }
   },
   postcss: {

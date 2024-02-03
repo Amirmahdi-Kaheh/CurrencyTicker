@@ -18,7 +18,7 @@ function toggleCollapse() {
 </script>
 
 <template>
-  <div @click="toggleCollapse" class="p-4 rounded-lg bg-border">
+  <div @click="toggleCollapse" class="p-4 rounded-lg bg-border cursor-pointer">
     <span>{{question}}</span>
     <div class="text-sm leading-6 mt-2" v-if="!isCollapsed">
       <span class="text-primary ml-1">پاسخ</span>

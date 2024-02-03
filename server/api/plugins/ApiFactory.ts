@@ -13,7 +13,7 @@ async function call<T>(
         headers: {
             ...fetchOptions?.headers,
         },
-        baseURL: useRuntimeConfig().public.API_BASE_URL,
+        baseURL: useRuntimeConfig().public.apiBaseUrl,
     })
         .then((response) => {
             return {
