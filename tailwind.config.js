@@ -28,6 +28,9 @@ export default {
       dark: {
         DEFAULT: "#292931",
       },
+      border: {
+        DEFAULT: "#1a1a1f"
+      },
       silver: {
         DEFAULT: "#EEEEEE",
         light: "#F8F8F8",

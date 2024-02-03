@@ -5,5 +5,5 @@ export default defineEventHandler(async (event) => {
         "GET",
         "/support/faq",
     );
-    return response.data;
+    return response.data.data;
 });
