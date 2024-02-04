@@ -3,8 +3,8 @@ const {tickers} = useTickersStore()
 </script>
 
 <template>
-  <div>
-    {{ tickers[0].symbol }}
+  <div class="flex flex-col gap-y-2">
+    <cards-symbol v-for="(symbol, symbolIndex) in tickers" :key="symbolIndex" v-bind="symbol"></cards-symbol>
   </div>
 </template>
 

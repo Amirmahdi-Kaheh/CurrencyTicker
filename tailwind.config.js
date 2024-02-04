@@ -36,6 +36,14 @@ export default {
         light: "#F8F8F8",
         dark: "#D4D8DB",
       },
+      negative: {
+        DEFAULT: "#FF0110",
+        light: "#FF011041"
+      },
+      positive: {
+        DEFAULT: "#24DD79",
+        light: "#24DD792D"
+      },
       white: "#FFFFFF",
       black: "#000000",
     },
