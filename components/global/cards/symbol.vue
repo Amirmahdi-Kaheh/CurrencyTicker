@@ -1,10 +1,12 @@
 <script setup lang="ts">
-const {tickers} = useTickersStore()
+const props = defineProps({
+
+})
 </script>
 
 <template>
   <div>
-    {{ tickers[0].symbol }}
+
   </div>
 </template>
 

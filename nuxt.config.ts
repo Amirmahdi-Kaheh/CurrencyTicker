@@ -32,13 +32,27 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBaseUrl: process.env.API_BASE_URL,
-      downloadBaseUrl: process.env.DOWNLOAD_BASE_URL
+      downloadBaseUrl: process.env.DOWNLOAD_BASE_URL,
+      webSocketBaseUrl: process.env.WEBSOCKET_BASE_URL
     }
   },
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
+    },
+  },
+  modules: ['@pinia/nuxt'],
+  vite: {
+    esbuild: {
+      drop: ["debugger"],
+      pure: [
+        "console.log",
+        "console.error",
+        "console.warn",
+        "console.debug",
+        "console.trace",
+      ],
     },
   },
 })

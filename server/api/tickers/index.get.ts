@@ -5,5 +5,5 @@ export default defineEventHandler(async (event) => {
         "GET",
         "/oapi/v1/market/tickers",
     );
-    return response.data.data;
+    return response.data.tickers;
 });
