@@ -21,6 +21,10 @@ const props = defineProps({
   symbol: {
     type: String,
     required: true
+  },
+  coin: {
+    type: String,
+    required: true
   }
 });
 
@@ -35,7 +39,7 @@ const changePercent = computed(calculateChangePercent);
   <div class="flex items-center justify-between p-4 rounded-lg bg-border">
    <div class="flex items-center gap-x-2">
      <img :src="icon" alt="" class="h-7 w-7 rounded-full">
-     <span class="text-en text-sm">{{symbol}}</span>
+     <span class="text-en text-sm">{{coin}}</span>
    </div>
     <div class="flex items-center gap-2">
       <div>
