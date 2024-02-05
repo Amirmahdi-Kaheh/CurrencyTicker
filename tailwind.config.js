@@ -26,7 +26,7 @@ export default {
         DEFAULT: "#FBBA00",
       },
       dark: {
-        DEFAULT: "#292931",
+        DEFAULT: "#212128",
       },
       border: {
         DEFAULT: "#1a1a1f"
@@ -38,11 +38,11 @@ export default {
       },
       negative: {
         DEFAULT: "#FF0110",
-        light: "#FF011041"
+        light: "#FF011017"
       },
       positive: {
         DEFAULT: "#24DD79",
-        light: "#24DD792D"
+        light: "#24DD7918"
       },
       white: "#FFFFFF",
       black: "#000000",
