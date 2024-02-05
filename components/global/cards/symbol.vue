@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {formatPrice} from "~/utils/numbers";
+const {liveTickers} = useTickersStore()
 
 const props = defineProps({
   icon: {
@@ -33,12 +34,21 @@ const calculateChangePercent = () => {
   return changePercent.toFixed(2); // Round to 2 decimal places
 }
 const changePercent = computed(calculateChangePercent);
+
+// check the live ticker
+function isLiveTicker(symbol: any) {
+  return liveTickers.includes(symbol)
+}
 </script>
 
 <template>
   <div class="flex items-center justify-between p-4 rounded-lg bg-border">
    <div class="flex items-center gap-x-2">
-     <img :src="icon" alt="" class="h-7 w-7 rounded-full">
+     <div class="relative flex items-center justify-center">
+       <img :src="icon" alt="" class="h-7 w-7 rounded-full">
+
+       <div v-show="isLiveTicker(symbol)" class="w-2.5 h-2.5 animate-ping rounded-full bg-positive absolute bottom-0 right-0"></div>
+     </div>
      <span class="text-en text-sm">{{coin}}</span>
    </div>
     <div class="flex items-center gap-2">

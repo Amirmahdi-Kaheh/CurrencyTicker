@@ -4,7 +4,8 @@ export default defineNuxtPlugin( (nuxtApp) => {
         const config = useRuntimeConfig();
 
         const {liveTickers } = useTickersStore();
-        const {tickers} = storeToRefs(useTickersStore())
+        const {tickers} = storeToRefs(useTickersStore());
+
         const ws = new WebSocket(`wss://${config.public.webSocketBaseUrl}`);
 
         const mappedLiveTickers = liveTickers.map((pair: any) => {
@@ -12,8 +13,6 @@ export default defineNuxtPlugin( (nuxtApp) => {
         });
 
         ws.onopen = () => {
-            console.log('WebSocket connected');
-
             ws.send(JSON.stringify({
                 "op": "subscribe",
                 "args": mappedLiveTickers
