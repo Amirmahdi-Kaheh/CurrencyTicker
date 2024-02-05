@@ -22,7 +22,13 @@ const props = defineProps({
     type: String,
     required: true
   }
-})
+});
+
+const calculateChangePercent = () => {
+  const changePercent = ((parseFloat(props.last) - parseFloat(props.open24h)) / parseFloat(props.open24h)) * 100;
+  return changePercent.toFixed(2); // Round to 2 decimal places
+}
+const changePercent = computed(calculateChangePercent);
 </script>
 
 <template>
@@ -33,7 +39,7 @@ const props = defineProps({
    </div>
     <div class="flex items-center gap-2">
       <div>
-        <span class="px-2 py-0.5 rounded-full bg-positive-light text-positive text-en text-sm" :class="{'bg-negative-light text-negative': 24 < 0}">{{24}}%</span>
+        <span class="px-2 py-0.5 rounded-full text-en text-sm" dir="ltr" :class="[{'bg-negative-light text-negative': changePercent < 0}, {'bg-positive-light text-positive': changePercent >= 0}]">{{changePercent}}%</span>
       </div>
       <div class="flex items-center gap-x-1 ">
         <span class="text-en">{{formatPrice(last)}}</span>
