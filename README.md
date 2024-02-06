@@ -1,4 +1,4 @@
-<img src="https://github.com/Amirmahdi-Kaheh/CurrencyTicker/blob/main/assets/project-preview.jpg?raw=true"></img>
+<img src="https://github.com/Amirmahdi-Kaheh/CurrencyTicker/blob/main/assets/img/project-preview.jpg?raw=true"></img>
 
 <h1 align="center">Currency Ticker</h1>
 
