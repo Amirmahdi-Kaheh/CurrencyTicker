@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const {getTickersByPair} = useTickersStore();
-
 const emit = defineEmits(['changed']);
 const pairList = ref(['USDT', 'IRT']);
 const selectedPair = ref(pairList.value[0]);
