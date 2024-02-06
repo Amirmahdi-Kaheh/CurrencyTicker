@@ -1,7 +1,13 @@
 <img src="https://github.com/Amirmahdi-Kaheh/CurrencyTicker/blob/main/assets/img/project-preview.jpg?raw=true"></img>
 
 <h1 align="center">Currency Ticker</h1>
-
+<div align="center">
+  <h3>
+    <a href="https://cuarrency-ticker.netlify.app/" color="white">
+      Live Demo
+    </a>
+  </h3>
+</div>
 <br>
 <br>
 <br>
