@@ -3,9 +3,11 @@
 
 <template>
   <div class="min-h-screen flex flex-col justify-between w-96 mx-auto">
-    <LayoutsTheHeader></LayoutsTheHeader>
+    <div>
+      <LayoutsTheHeader></LayoutsTheHeader>
 
-    <slot />
+      <slot />
+    </div>
 
     <LayoutsTheFooter></LayoutsTheFooter>
   </div>

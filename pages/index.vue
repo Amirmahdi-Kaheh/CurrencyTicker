@@ -1,12 +1,14 @@
 <script setup lang="ts">
-const {tickers} = useTickersStore()
+const {getTickersByPair} = useTickersStore();
+
+const currentPair = ref('USDT');
 </script>
 
 <template>
   <div class="flex flex-col gap-y-2">
-    <pages-home-page-pair-filters></pages-home-page-pair-filters>
+    <pages-home-page-pair-filters @changed="(val)=> currentPair = val"></pages-home-page-pair-filters>
 
-    <cards-symbol v-for="(symbol, symbolIndex) in tickers" :key="symbolIndex" v-bind="symbol"></cards-symbol>
+    <cards-symbol v-for="(symbol, symbolIndex) in getTickersByPair(currentPair)" :key="symbolIndex" v-bind="symbol"></cards-symbol>
   </div>
 </template>
 
