@@ -8,6 +8,7 @@ export default defineNuxtPlugin( (nuxtApp) => {
 
         const ws = new WebSocket(`wss://${config.public.webSocketBaseUrl}`);
 
+        // create an array of the live tickers symbol name for WebSocket
         const mappedLiveTickers = liveTickers.map((pair: any) => {
             return { "channel": "tickers", "instId": pair };
         });
@@ -21,6 +22,7 @@ export default defineNuxtPlugin( (nuxtApp) => {
 
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
+
             const scopedTicker = tickers.value.find((symbols)=> symbols.symbol === data.arg.instId);
 
             if(scopedTicker){

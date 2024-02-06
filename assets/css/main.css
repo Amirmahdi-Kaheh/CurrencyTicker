@@ -260,7 +260,7 @@
     }
 
     *:not(i) {
-        font-family: Poppins, Peyda, sans-serif !important;
+        font-family: Peyda, sans-serif !important;
     }
 
 
@@ -283,30 +283,12 @@
 }
 
 @layer components {
-    .centered {
-        @apply flex items-center justify-center
-    }
-    .centered-col {
-        @apply flex flex-col items-center justify-center
-    }
-
     /*  BUTTON  */
     .btn {
         @apply relative flex items-center px-4 py-2.5 rounded-sm gap-x-3 font-medium text-sm hover:before:brightness-90 before:-z-10 before:content-[''] before:absolute before:left-0 before:top-0  before:rounded-sm before:w-full before:h-full active:before:scale-95 before:transition-all transition-all z-10
     }
 
-    .btn-outline {
-        @apply before:border before:border-silver hover:before:bg-silver-light
-    }
-
-    .btn-outline-dark {
-        @apply before:border before:border-silver before:opacity-10 hover:before:bg-silver-light
-    }
-
     .btn-primary {
         @apply before:bg-primary text-white
-    }
-    .page-section {
-        @apply container lg:py-8 py-6 border-b border-silver last:border-none
     }
 }

@@ -3,10 +3,10 @@
 
 <template>
   <div class="min-h-screen flex flex-col justify-between w-96 mx-auto">
-    <div>
-      <LayoutsTheHeader></LayoutsTheHeader>
-      <slot />
-    </div>
+    <LayoutsTheHeader></LayoutsTheHeader>
+
+    <slot />
+
     <LayoutsTheFooter></LayoutsTheFooter>
   </div>
 </template>
