@@ -3,7 +3,7 @@
 <h1 align="center">Currency Ticker</h1>
 <div align="center">
   <h3>
-    <a href="https://cuarrency-ticker.netlify.app/" color="white">
+    <a href="https://currency-ticker.netlify.app/" color="white">
       Live Demo
     </a>
   </h3>
